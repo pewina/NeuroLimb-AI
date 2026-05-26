@@ -71,32 +71,32 @@ EMG Signal → Neural Decoder → Motor Commands → Self-Healing Loop
 ┌─────────────────────────────────────────────────────────────────┐
 │                        NEUROLIMB AI                             │
 │                                                                 │
-│  ┌─────────────┐    ┌──────────────────────────────────────┐   │
-│  │  EMG Input  │    │         Neural Network               │   │
-│  │             │    │                                      │   │
-│  │  CH1 ──────────► │  [4 inputs] → [6] → [6] → [4 out]  │   │
-│  │  CH2 ──────────► │                                      │   │
-│  │  CH3 ──────────► │  STDP weight updates every 120ms    │   │
-│  │  CH4 ──────────► │  Homeostasis scales every layer     │   │
-│  │  @ 2kHz     │    │  Structural plasticity prunes/grows │   │
-│  └─────────────┘    └──────────────┬───────────────────────┘   │
+│  ┌─────────────┐    ┌──────────────────────────────────────┐    │
+│  │  EMG Input  │    │         Neural Network               │    │
+│  │             │    │                                      │    │
+│  │  CH1 ──────────► │  [4 inputs] → [6] → [6] → [4 out]    │    │
+│  │  CH2 ──────────► │                                      │    │
+│  │  CH3 ──────────► │  STDP weight updates every 120ms     │    │
+│  │  CH4 ──────────► │  Homeostasis scales every layer      │    │
+│  │  @ 2kHz     │    │  Structural plasticity prunes/grows  │    │
+│  └─────────────┘    └──────────────┬───────────────────────┘    │
 │                                    │                            │
-│                     ┌──────────────▼───────────────────────┐   │
-│                     │         Motor Output                  │   │
-│                     │                                      │   │
-│                     │  Thumb │ Index │ Middle │ Ring │ Pinky│   │
-│                     │  PWM servo control @ 50 Hz           │   │
-│                     └──────────────┬───────────────────────┘   │
+│                     ┌──────────────▼───────────────────────┐    │
+│                     │         Motor Output                 │    │
+│                     │                                      │    │
+│                     │ Thumb │ Index │ Middle │ Ring │ Pinky│    │
+│                     │      PWM servo control @ 50 Hz       │    │
+│                     └──────────────┬───────────────────────┘    │
 │                                    │                            │
-│                     ┌──────────────▼───────────────────────┐   │
-│                     │       Self-Healing Loop               │   │
-│                     │                                      │   │
-│                     │  Detect instability (acc < 30%)      │   │
-│                     │  → Homeostatic weight rescaling      │   │
-│                     │  → Structural plasticity (regrow)    │   │
-│                     │  → Neuromodulation boost             │   │
-│                     │  → Accuracy restored (no retraining) │   │
-│                     └──────────────────────────────────────┘   │
+│                     ┌──────────────▼───────────────────────┐    │
+│                     │       Self-Healing Loop              │    │
+│                     │                                      │    │
+│                     │    Detect instability (acc < 30%)    │    │
+│                     │  → Homeostatic weight rescaling      │    │
+│                     │  → Structural plasticity (regrow)    │    │
+│                     │  → Neuromodulation boost             │    │
+│                     │  → Accuracy restored (no retraining) │    │
+│                     └──────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
