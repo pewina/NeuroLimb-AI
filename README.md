@@ -269,7 +269,7 @@ The adaptive system uses **80% less power** than a traditional ANN — critical 
 
 ## Team
 
-> Add your team name, institution, and course here.
+Sarnitha R, Jerusalem college of Engineering
 
 ---
 
